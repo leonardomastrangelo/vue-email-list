@@ -40,14 +40,17 @@
         <h1>Generate Emails with axios!!</h1>
 
         <!-- button generation -->
-        <button @click="getEmail()" class="btn btn-success my-3">Generate</button>
+        <button @click="getEmail(); getPhotos()" class="btn btn-success my-3">Generate</button>
 
-        <div class="row" v-show="(emailList.length === max)">
+        <a href="https://www.pexels.com">Photos provided by Pexels</a>
+
+        <div class="row" v-show="(emailList.length === max && photos.length === max)">
           <!-- dynamic Card Elemet -->
-          <div class="col-2 py-3" v-for="email in emailList">
+          <div class="col-2 py-3 d-flex align-items-center" 
+          v-for="(email,index) in emailList">
             <!-- dynamic card -->
             <div class="card">
-              <img src="img/prova-img.jpg" class="card-img-top" alt="prova" />
+              <img :src="photos[index]" class="card-img-top my-fluid" alt="prova" />
               <div class="card-body">
                 <!-- email -->
                 <h5 class="card-title">
@@ -61,6 +64,6 @@
     </div>
 
     <!-- JS -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="module"></script>
   </body>
 </html>
