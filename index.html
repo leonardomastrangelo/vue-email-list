@@ -32,18 +32,27 @@
     <title>Vue Email List</title>
   </head>
   <body>
+
     <div id="app">
-      <div class="container py-4 text-center">
+      <div class="container py-4 text-center mt-2">
+
+        <!-- title -->
         <h1>Generate Emails with axios!!</h1>
-        <button class="btn btn-success">Generate</button>
+
+        <!-- button generation -->
+        <button @click="getEmail()" class="btn btn-success my-3">Generate</button>
+
         <div class="row">
-          <!-- Card Elemet -->
-          <div class="col-2">
+          <!-- dynamic Card Elemet -->
+          <div class="col-2 py-3" v-for="email in emailList">
             <!-- dynamic card -->
             <div class="card">
               <img src="img/prova-img.jpg" class="card-img-top" alt="prova" />
               <div class="card-body">
-                <h5 class="card-title">Email</h5>
+                <!-- email -->
+                <h5 class="card-title">
+                    {{email}}
+                </h5>
               </div>
             </div>
           </div>
