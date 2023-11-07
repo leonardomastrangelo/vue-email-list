@@ -1,0 +1,15 @@
+/* general */
+:root {
+    --isabelline: #edede9ff;
+    --timberwolf: #d6ccc2ff;
+    --linen: #f5ebe0ff;
+    --champagne-pink: #e3d5caff;
+    --pale-dogwood: #d5bdafff;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+.my-fluid {
+    width: 100%;
+    display: block;
+}
