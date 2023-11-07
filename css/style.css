@@ -8,8 +8,16 @@
 }
 body {
     font-family: 'Lato', sans-serif;
+    background-color: var(--isabelline);
 }
 .my-fluid {
     width: 100%;
     display: block;
+}
+
+.bg-container {
+    background-color: var(--pale-dogwood);
+}
+.bg-row {
+    background-color: var(--linen);
 }

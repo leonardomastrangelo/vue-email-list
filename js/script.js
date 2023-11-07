@@ -31,7 +31,7 @@ createApp({
         headers: {
             authorization: 'arjVaGJ7Oe6B1aZNeDtXPjq5NQdC4tZvyRwDteSytoCwfe6qq3rSdOUJ'
         }
-    }).then((prova) => {
+        }).then((prova) => {
         // refresh
         this.photos = [];
         for (let i = 0; i < this.max; i++) {

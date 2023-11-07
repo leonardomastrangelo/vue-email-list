@@ -34,7 +34,7 @@
   <body>
 
     <div id="app">
-      <div class="container py-4 text-center mt-2">
+      <div class="container p-4 text-center mt-2 bg-container rounded-5">
 
         <!-- title -->
         <h1>Generate Emails with axios!!</h1>
@@ -42,9 +42,9 @@
         <!-- button generation -->
         <button @click="getEmail(); getPhotos()" class="btn btn-success my-3">Generate</button>
 
-        <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        <a class="d-block mb-4" href="https://www.pexels.com">Photos provided by Pexels</a>
 
-        <div class="row" v-show="(emailList.length === max && photos.length === max)">
+        <div class="row bg-row rounded-5" v-show="(emailList.length === max && photos.length === max)">
           <!-- dynamic Card Elemet -->
           <div class="col-2 py-3 d-flex align-items-center" 
           v-for="(email,index) in emailList">
