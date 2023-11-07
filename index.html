@@ -42,7 +42,7 @@
         <!-- button generation -->
         <button @click="getEmail()" class="btn btn-success my-3">Generate</button>
 
-        <div class="row">
+        <div class="row" v-show="(emailList.length === max)">
           <!-- dynamic Card Elemet -->
           <div class="col-2 py-3" v-for="email in emailList">
             <!-- dynamic card -->

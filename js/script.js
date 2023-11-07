@@ -4,14 +4,17 @@ const { createApp } = Vue
     //* DATA
     data() {
       return {
-        emailList : []
+        emailList : [],
+        max : 12
       }
     },
     //* METHODS
     methods : {
         getEmail(){
+            // refresh
+            this.emailList = []
             // cycle 12 random emials
-            for (let i = 0; i < 12; i++) {
+            for (let i = 0; i < this.max; i++) {
                 //* axios
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((email)=> {
                     // push emial to list
